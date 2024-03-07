@@ -1,6 +1,7 @@
 import Title from "./components/TitleLogo";
-import Footer from "./components/Footer";
 import PresenterCard from "./components/PresenterCard";
+import Timer from "./components/Timer";
+import Footer from "./components/Footer";
 
 import presenterOne from "@/images/example-photo-1.jpg";
 import presenterTwo from "@/images/example-photo-2.jpg";
@@ -43,6 +44,7 @@ export default function Home() {
           <PresenterCard key={presenter.id} {...presenter} />
         ))}
       </div>
+      <Timer initialMinutes={1} initialSeconds={30} />
       <Footer />
     </div>
   );
