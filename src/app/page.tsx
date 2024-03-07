@@ -1,4 +1,4 @@
-import Title from "./components/TitleLogo";
+import Title from "./components/Title";
 import PresenterCard from "./components/PresenterCard";
 import Timer from "./components/Timer";
 import Footer from "./components/Footer";
@@ -44,7 +44,7 @@ export default function Home() {
           <PresenterCard key={presenter.id} {...presenter} />
         ))}
       </div>
-      <Timer initialMinutes={1} initialSeconds={30} />
+      <Timer />
       <Footer />
     </div>
   );
