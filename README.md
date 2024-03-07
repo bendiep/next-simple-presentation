@@ -1,1 +1,1 @@
-# simple-presentation
+# react-simple-presentation
