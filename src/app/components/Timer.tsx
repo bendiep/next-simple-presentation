@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import { useTimer } from 'react-timer-hook'
 
-function Timer() {
+export const Timer = () => {
   const [inputMinutes, setInputMinutes] = useState(0)
   const [inputSeconds, setInputSeconds] = useState(0)
 
@@ -100,5 +100,3 @@ function Timer() {
     </div>
   )
 }
-
-export default Timer

@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from 'next/image'
 
-const PresenterCard = ({
+export const PresenterCard = ({
   src,
   name,
   topic,
@@ -22,5 +22,3 @@ const PresenterCard = ({
     </div>
   )
 }
-
-export default PresenterCard

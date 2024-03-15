@@ -1,7 +1,7 @@
 import Title from './components/Title'
-import PresenterCard from './components/PresenterCard'
-import Timer from './components/Timer'
-import Footer from './components/Footer'
+import { PresenterCard } from './components/PresenterCard'
+import { Timer } from './components/Timer'
+import { Footer } from './components/Footer'
 
 import presenterOne from '@/images/example-photo-1.jpeg'
 import presenterTwo from '@/images/example-photo-2.jpeg'
