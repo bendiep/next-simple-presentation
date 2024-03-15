@@ -3,10 +3,9 @@ import PresenterCard from "./components/PresenterCard";
 import Timer from "./components/Timer";
 import Footer from "./components/Footer";
 
-import presenterOne from "@/images/example-photo-1.jpg";
-import presenterTwo from "@/images/example-photo-2.jpg";
-import presenterThree from "@/images/example-photo-3.jpg";
-import presenterFour from "@/images/example-photo-4.jpg";
+import presenterOne from "@/images/example-photo-1.jpeg";
+import presenterTwo from "@/images/example-photo-2.jpeg";
+import presenterThree from "@/images/example-photo-3.jpeg";
 
 export default function Home() {
   const presenters = [
@@ -28,17 +27,14 @@ export default function Home() {
       name: "Jonathan Pierce",
       topic: "Fostering Resilience",
     },
-    // {
-    //   id: 4,
-    //   src: presenterFour,
-    //   name: "Sushi Dog",
-    //   topic: "Top Snacks for Dogs",
-    // },
   ];
 
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center">
       <Title />
+      <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">
+        featuring
+      </h2>
       <div className="flex flex-wrap justify-center">
         {presenters.map((presenter) => (
           <PresenterCard key={presenter.id} {...presenter} />
