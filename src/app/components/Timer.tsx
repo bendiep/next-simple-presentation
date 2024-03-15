@@ -1,39 +1,39 @@
-"use client";
+'use client'
 
-import React, { useState } from "react";
-import { useTimer } from "react-timer-hook";
+import React, { useState } from 'react'
+import { useTimer } from 'react-timer-hook'
 
 function Timer() {
-  const [inputMinutes, setInputMinutes] = useState(0);
-  const [inputSeconds, setInputSeconds] = useState(0);
+  const [inputMinutes, setInputMinutes] = useState(0)
+  const [inputSeconds, setInputSeconds] = useState(0)
 
-  const expiryTimestamp = new Date();
+  const expiryTimestamp = new Date()
 
   const { seconds, minutes, hours, days, isRunning, restart } = useTimer({
     expiryTimestamp,
-    onExpire: () => console.warn("Timer expired"),
+    onExpire: () => console.warn('Timer expired'),
     autoStart: false,
-  });
+  })
 
   const startTimer = () => {
-    const time = new Date();
-    time.setSeconds(time.getSeconds() + inputMinutes * 60 + inputSeconds);
-    restart(time);
-  };
+    const time = new Date()
+    time.setSeconds(time.getSeconds() + inputMinutes * 60 + inputSeconds)
+    restart(time)
+  }
 
   const resetTimer = () => {
-    setInputMinutes(0);
-    setInputSeconds(0);
-    restart(expiryTimestamp, false); // Pass false to stop the timer
-  };
+    setInputMinutes(0)
+    setInputSeconds(0)
+    restart(expiryTimestamp, false) // Pass false to stop the timer
+  }
 
   return (
-    <div style={{ textAlign: "center" }}>
-      <div style={{ fontSize: "100px" }}>
+    <div style={{ textAlign: 'center' }}>
+      <div style={{ fontSize: '100px' }}>
         <span>{days}</span>:<span>{hours}</span>:<span>{minutes}</span>:
         <span>{seconds}</span>
       </div>
-      <p>{isRunning ? "Running" : "Not running"}</p>
+      <p>{isRunning ? 'Running' : 'Not running'}</p>
       <div>
         <input
           type="number"
@@ -41,12 +41,12 @@ function Timer() {
           onChange={(e) => setInputMinutes(parseInt(e.target.value))}
           placeholder="mins"
           style={{
-            width: "5rem",
-            marginRight: "10px",
-            padding: "10px",
-            borderRadius: "5px",
-            border: "1px solid #ccc",
-            outline: "none",
+            width: '5rem',
+            marginRight: '10px',
+            padding: '10px',
+            borderRadius: '5px',
+            border: '1px solid #ccc',
+            outline: 'none',
           }}
         />
         <input
@@ -55,11 +55,11 @@ function Timer() {
           onChange={(e) => setInputSeconds(parseInt(e.target.value))}
           placeholder="sec"
           style={{
-            width: "5rem",
-            padding: "10px",
-            borderRadius: "5px",
-            border: "1px solid #ccc",
-            outline: "none",
+            width: '5rem',
+            padding: '10px',
+            borderRadius: '5px',
+            border: '1px solid #ccc',
+            outline: 'none',
           }}
         />
       </div>
@@ -98,7 +98,7 @@ function Timer() {
         </label>
       </div> */}
     </div>
-  );
+  )
 }
 
-export default Timer;
+export default Timer
