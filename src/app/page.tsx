@@ -41,9 +41,8 @@ export default function Home() {
           <PresenterCard key={presenter.id} {...presenter} />
         ))}
       </div>
-      {/* <Timer /> */}
+      <Timer />
       <Footer />
     </div>
   )
 }
-// I want to add a the date as a text element to the top left corner of the page, no matter if i resize the page, it's always top left
