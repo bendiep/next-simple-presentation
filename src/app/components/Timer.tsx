@@ -28,8 +28,8 @@ export const Timer = () => {
   }
 
   return (
-    <div style={{ textAlign: 'center' }}>
-      <div style={{ fontSize: '100px' }}>
+    <div className="text-center">
+      <div className="text-6xl font-medium">
         <span>{days}</span>:<span>{hours}</span>:<span>{minutes}</span>:
         <span>{seconds}</span>
       </div>
