@@ -1,11 +1,17 @@
 import Image from 'next/image'
 
-import logo from '@/images/fd-logo.webp'
+// import logo from '@/images/logo.jpg'
+import logo from '@/images/logo.svg'
 
 export const Footer = () => {
   return (
     <footer className="mb-16 mt-16">
-      <Image className="rounded-lg" src={logo} alt="Logo" width={50} />
+      <Image
+        className="absolute bottom-0 right-0 rounded-lg p-1 grayscale"
+        src={logo}
+        alt="Logo"
+        width={325}
+      />
     </footer>
   )
 }

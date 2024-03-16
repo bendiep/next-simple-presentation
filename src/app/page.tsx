@@ -41,7 +41,7 @@ export default function Home() {
           <PresenterCard key={presenter.id} {...presenter} />
         ))}
       </div>
-      <Timer />
+      {/* <Timer /> */}
       <Footer />
     </div>
   )
