@@ -1,4 +1,4 @@
-import { Title } from './components/Title'
+import { Header } from './components/Title'
 import { PresenterCard } from './components/PresenterCard'
 import { Timer } from './components/Timer'
 import { Footer } from './components/Footer'
@@ -32,7 +32,7 @@ export default function Home() {
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-gray-100">
-      <Title date={date.toUpperCase()} />
+      <Header date={date.toUpperCase()} />
       <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">
         featuring
       </h2>
