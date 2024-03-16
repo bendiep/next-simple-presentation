@@ -42,12 +42,12 @@ export const Timer = () => {
       </div>
       <p>{isRunning ? 'Running' : 'Not running'}</p>
       <div className="md:flex">
-        <div className="w-50 relative mr-2 mt-2 rounded-md shadow-sm">
+        <div className="w-50 relative mt-2 rounded-md shadow-sm md:mr-2">
           <input
             type="number"
             name="timer-minutes"
             id="timer-minutes"
-            className="w-full rounded-md border-0 py-1.5 pl-7 pr-12 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+            className="w-full rounded-md border-0 py-1.5 pl-7 pr-12 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
             placeholder="0"
             aria-describedby="timer-minutes"
             onChange={(e) => setInputMinutes(parseInt(e.target.value))}
@@ -63,7 +63,7 @@ export const Timer = () => {
             type="number"
             name="timer-seconds"
             id="timer-seconds"
-            className="w-full rounded-md border-0 py-1.5 pl-7 pr-12 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+            className="w-full rounded-md border-0 py-1.5 pl-7 pr-12 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
             placeholder="0"
             aria-describedby="timer-seconds"
             onChange={(e) => setInputSeconds(parseInt(e.target.value))}
@@ -75,8 +75,6 @@ export const Timer = () => {
           </div>
         </div>
       </div>
-
-      <br />
       <br />
       <button onClick={startTimer}>Start</button>
       <br />
