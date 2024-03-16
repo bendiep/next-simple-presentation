@@ -26,16 +26,23 @@ export const Timer = () => {
     setInputSeconds(0)
     restart(expiryTimestamp, false) // Pass false to stop the timer
   }
+  const formatTime = (time: number) => {
+    return time.toString().padStart(2, '0')
+  }
+
+  const formattedHours = formatTime(hours)
+  const formattedMinutes = formatTime(minutes)
+  const formattedSeconds = formatTime(seconds)
 
   return (
     <div className="text-center">
       <div className="text-6xl font-medium">
-        <span>{days}</span>:<span>{hours}</span>:<span>{minutes}</span>:
-        <span>{seconds}</span>
+        <span>{formattedHours}</span>:<span>{formattedMinutes}</span>:
+        <span>{formattedSeconds}</span>
       </div>
       <p>{isRunning ? 'Running' : 'Not running'}</p>
-      <div>
-        <div className="w-100 relative mt-2 rounded-md shadow-sm">
+      <div className="md:flex">
+        <div className="w-50 relative mr-2 mt-2 rounded-md shadow-sm">
           <input
             type="number"
             name="timer-minutes"
@@ -51,7 +58,7 @@ export const Timer = () => {
             </span>
           </div>
         </div>
-        <div className="w-100 relative mt-2 rounded-md shadow-sm">
+        <div className="w-50 relative mt-2 rounded-md shadow-sm">
           <input
             type="number"
             name="timer-seconds"
