@@ -76,9 +76,36 @@ export const Timer = () => {
         </div>
       </div>
       <br />
-      <button onClick={startTimer}>Start</button>
-      <br />
-      <button onClick={resetTimer}>Reset</button>
+      <div>
+        <button
+          type="button"
+          className="hover:bg-blue-70 m-1 rounded-full bg-blue-500 p-2 text-white"
+          onClick={startTimer}
+        >
+          <svg
+            className="h-5 w-5"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
+          </svg>
+        </button>
+        <button
+          type="button"
+          className="m-1 rounded-full bg-red-500 p-2 text-white hover:bg-red-700"
+          onClick={resetTimer}
+        >
+          <svg
+            className="h-5 w-5"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
+          </svg>
+        </button>
+      </div>
     </div>
   )
 }
