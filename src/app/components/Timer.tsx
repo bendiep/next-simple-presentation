@@ -144,23 +144,26 @@ export const Timer = () => {
           </div>
         </div>
         <div className="mt-2">
-          <button
-            type="button"
-            className="m-1 rounded-full bg-blue-500 p-2 text-white hover:bg-blue-700"
-            onClick={startTimer}
-          >
-            <StartIcon />
-          </button>
-          <button
-            type="button"
-            className="m-1 rounded-full bg-red-500 p-2 text-white hover:bg-red-700"
-            onClick={resetTimer}
-          >
-            <ResetIcon />
-          </button>
+          {isRunning ? (
+            <button
+              type="button"
+              className="m-1 rounded-full bg-gray-400 p-2 text-white hover:bg-gray-500"
+              onClick={resetTimer}
+            >
+              <ResetIcon />
+            </button>
+          ) : (
+            <button
+              type="button"
+              className="m-1 rounded-full bg-gray-400 p-2 text-white hover:bg-gray-500"
+              onClick={startTimer}
+            >
+              <StartIcon />
+            </button>
+          )}
         </div>
       </div>
-      <button className="mt-8 text-stone-400" onClick={toggleTimer}>
+      <button className="mt-2 text-stone-400" onClick={toggleTimer}>
         {showTimer ? 'Hide Timer' : 'Show Timer'}
       </button>
     </div>
