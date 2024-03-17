@@ -84,8 +84,8 @@ export const Timer = () => {
   return (
     <div className="text-center md:mt-8">
       <div className={`mt-4 text-center ${showTimer ? '' : 'invisible'}`}>
-        <p className="text-stone-400">
-          {isRunning ? 'Running' : 'Not running'}
+        <p className="font-sans text-stone-400">
+          {isRunning ? 'starting in...' : 'idle'}
         </p>
         <div className="text-6xl font-medium">
           <span>{formattedHours}</span>:<span>{formattedMinutes}</span>:
