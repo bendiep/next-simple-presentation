@@ -45,8 +45,8 @@ function ResetIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 
 export const Timer = () => {
   const [showTimer, setShowTimer] = useState(true)
-  const [inputMinutes, setInputMinutes] = useState(0)
-  const [inputSeconds, setInputSeconds] = useState(0)
+  const [inputMinutes, setInputMinutes] = useState('0')
+  const [inputSeconds, setInputSeconds] = useState('0')
   const expiryTimestamp = new Date()
 
   const { seconds, minutes, hours, isRunning, restart } = useTimer({
@@ -61,7 +61,9 @@ export const Timer = () => {
 
   const startTimer = () => {
     const time = new Date()
-    time.setSeconds(time.getSeconds() + inputMinutes * 60 + inputSeconds)
+    const mins = parseInt(inputMinutes === '' ? '0' : inputMinutes)
+    const secs = parseInt(inputSeconds === '' ? '0' : inputMinutes)
+    time.setSeconds(time.getSeconds() + mins * 60 + secs)
     restart(time)
   }
 
@@ -103,7 +105,7 @@ export const Timer = () => {
               min="0"
               value={inputMinutes}
               onChange={(e) => {
-                setInputMinutes(parseInt(e.target.value ? e.target.value : ''))
+                setInputMinutes(e.target.value)
               }}
             />
             <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
@@ -122,7 +124,7 @@ export const Timer = () => {
               min="0"
               value={inputSeconds}
               onChange={(e) => {
-                setInputSeconds(parseInt(e.target.value ? e.target.value : ''))
+                setInputSeconds(e.target.value)
               }}
             />
             <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
