@@ -82,10 +82,7 @@ export const Timer = () => {
   const formattedSeconds = formatTime(seconds)
 
   return (
-    <div className="text-center md:mt-16">
-      <button className="text-stone-400" onClick={toggleTimer}>
-        {showTimer ? 'Hide Timer' : 'Show Timer'}
-      </button>
+    <div className="text-center md:mt-8">
       <div className={`mt-4 text-center ${showTimer ? '' : 'invisible'}`}>
         <p className="text-stone-400">
           {isRunning ? 'Running' : 'Not running'}
@@ -95,7 +92,7 @@ export const Timer = () => {
           <span>{formattedSeconds}</span>
         </div>
         <div className="md:flex">
-          <div className="w-50 relative mt-2 rounded-md shadow-sm md:mr-2">
+          <div className="relative mt-2 rounded-md shadow-sm md:mr-2 md:w-32">
             <input
               type="number"
               name="timer-minutes"
@@ -114,7 +111,7 @@ export const Timer = () => {
               </span>
             </div>
           </div>
-          <div className="w-50 relative mt-2 rounded-md shadow-sm">
+          <div className="relative mt-2 rounded-md shadow-sm md:w-32">
             <input
               type="number"
               name="timer-seconds"
@@ -151,6 +148,9 @@ export const Timer = () => {
           </button>
         </div>
       </div>
+      <button className="mt-8 text-stone-400" onClick={toggleTimer}>
+        {showTimer ? 'Hide Timer' : 'Show Timer'}
+      </button>
     </div>
   )
 }
