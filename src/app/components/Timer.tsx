@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import { useTimer } from 'react-timer-hook'
 
-function StartIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+const StartIcon = (props: React.ComponentPropsWithoutRef<'svg'>) => {
   return (
     <svg
       className="h-5 w-5"
@@ -22,7 +22,7 @@ function StartIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
-function ResetIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+const ResetIcon = (props: React.ComponentPropsWithoutRef<'svg'>) => {
   return (
     <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="#ffffff">
       <path
@@ -62,14 +62,14 @@ export const Timer = () => {
   const startTimer = () => {
     const time = new Date()
     const mins = parseInt(inputMinutes === '' ? '0' : inputMinutes)
-    const secs = parseInt(inputSeconds === '' ? '0' : inputMinutes)
+    const secs = parseInt(inputSeconds === '' ? '0' : inputSeconds)
     time.setSeconds(time.getSeconds() + mins * 60 + secs)
     restart(time)
   }
 
   const resetTimer = () => {
-    setInputMinutes(0)
-    setInputSeconds(0)
+    setInputMinutes('0')
+    setInputSeconds('0')
     restart(expiryTimestamp, false) // Pass false to stop the timer
   }
 
