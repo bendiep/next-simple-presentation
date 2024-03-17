@@ -174,10 +174,6 @@ export const Timer = () => {
         className="mt-8"
       >
         {isMenuHovered ? (
-          <button className="text-sm text-stone-400" onClick={toggleTimer}>
-            {showTimer ? 'Hide Timer' : 'Show Timer'}
-          </button>
-        ) : (
           <>
             {showTimer && isRunning ? (
               <button
@@ -188,6 +184,12 @@ export const Timer = () => {
                 <ResetIcon />
               </button>
             ) : null}
+            <button className="text-sm text-stone-400" onClick={toggleTimer}>
+              {showTimer ? 'Hide Timer' : 'Show Timer'}
+            </button>
+          </>
+        ) : (
+          <>
             <button>
               <ThreeDotsIcon className="m-1" />
             </button>
