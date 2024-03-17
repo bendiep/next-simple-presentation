@@ -43,6 +43,18 @@ const ResetIcon = (props: React.ComponentPropsWithoutRef<'svg'>) => {
   )
 }
 
+const ThreeDotsIcon = (props: React.ComponentPropsWithoutRef<'svg'>) => {
+  return (
+    <svg className="h-5 w-5" viewBox="0 0 24 24" fill="#000000" stroke="none">
+      <g fill="#9ca3af">
+        <rect width="5" height="5" x="3" y="10" rx="2"></rect>{' '}
+        <rect width="5" height="5" x="10" y="10" rx="2"></rect>{' '}
+        <rect width="5" height="5" x="17" y="10" rx="2"></rect>{' '}
+      </g>
+    </svg>
+  )
+}
+
 export const Timer = () => {
   const [showTimer, setShowTimer] = useState(true)
   const [inputMinutes, setInputMinutes] = useState('0')
@@ -101,7 +113,9 @@ export const Timer = () => {
             <span className="font-sans text-sm font-medium">s</span>
           </span>
         </div>
-        <div className={`md:flex ${isRunning ? 'invisible' : ''}`}>
+        <div
+          className={`md:flex md:justify-center ${isRunning ? 'invisible' : ''}`}
+        >
           <div className="relative mt-2 rounded-md shadow-sm md:mr-2 md:w-32">
             <input
               type="number"
@@ -161,9 +175,11 @@ export const Timer = () => {
           )}
         </div>
       </div>
-      <button className="mt-2 text-sm text-stone-400" onClick={toggleTimer}>
-        {showTimer ? 'Hide Timer' : 'Show Timer'}
-      </button>
+      <div className="mt-2">
+        <button className="text-sm text-stone-400" onClick={toggleTimer}>
+          {showTimer ? 'Hide Timer' : 'Show Timer'}
+        </button>
+      </div>
     </div>
   )
 }
