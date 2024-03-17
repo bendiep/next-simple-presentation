@@ -56,7 +56,7 @@ const ThreeDotsIcon = (props: React.ComponentPropsWithoutRef<'svg'>) => {
 }
 
 export const Timer = () => {
-  const [showTimer, setShowTimer] = useState(true)
+  const [showTimer, setShowTimer] = useState(false)
   const [isMenuHovered, setIsMenuHovered] = useState(false)
   const [inputMinutes, setInputMinutes] = useState('0')
   const [inputSeconds, setInputSeconds] = useState('0')
