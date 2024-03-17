@@ -57,6 +57,7 @@ const ThreeDotsIcon = (props: React.ComponentPropsWithoutRef<'svg'>) => {
 
 export const Timer = () => {
   const [showTimer, setShowTimer] = useState(true)
+  const [isMenuHovered, setIsMenuHovered] = useState(false)
   const [inputMinutes, setInputMinutes] = useState('0')
   const [inputSeconds, setInputSeconds] = useState('0')
   const expiryTimestamp = new Date()
@@ -156,15 +157,7 @@ export const Timer = () => {
           </div>
         </div>
         <div className="mt-2">
-          {isRunning ? (
-            <button
-              type="button"
-              className="m-1 rounded-full bg-gray-400 p-2 text-white hover:bg-gray-500"
-              onClick={resetTimer}
-            >
-              <ResetIcon />
-            </button>
-          ) : (
+          {!isRunning ? (
             <button
               type="button"
               className="m-1 rounded-full bg-gray-400 p-2 text-white hover:bg-gray-500"
@@ -172,13 +165,34 @@ export const Timer = () => {
             >
               <StartIcon />
             </button>
-          )}
+          ) : null}
         </div>
       </div>
-      <div className="mt-2">
-        <button className="text-sm text-stone-400" onClick={toggleTimer}>
-          {showTimer ? 'Hide Timer' : 'Show Timer'}
-        </button>
+      <div
+        onMouseEnter={() => setIsMenuHovered(true)}
+        onMouseLeave={() => setIsMenuHovered(false)}
+        className="mt-8"
+      >
+        {isMenuHovered ? (
+          <button className="text-sm text-stone-400" onClick={toggleTimer}>
+            {showTimer ? 'Hide Timer' : 'Show Timer'}
+          </button>
+        ) : (
+          <>
+            {showTimer && isRunning ? (
+              <button
+                type="button"
+                className="m-1 rounded-full bg-gray-400 p-2 text-white hover:bg-gray-500"
+                onClick={resetTimer}
+              >
+                <ResetIcon />
+              </button>
+            ) : null}
+            <button>
+              <ThreeDotsIcon className="m-1" />
+            </button>
+          </>
+        )}
       </div>
     </div>
   )
