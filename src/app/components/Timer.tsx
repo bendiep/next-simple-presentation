@@ -40,7 +40,7 @@ export const Timer = () => {
   const formattedSeconds = formatTime(seconds)
 
   return (
-    <div>
+    <div className="mt-16 text-center">
       <button onClick={toggleTimer}>
         {showTimer ? 'Hide Timer' : 'Show Timer'}
       </button>
