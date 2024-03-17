@@ -171,29 +171,44 @@ export const Timer = () => {
       <div
         onMouseEnter={() => setIsMenuHovered(true)}
         onMouseLeave={() => setIsMenuHovered(false)}
-        className="mt-8"
+        className="mt-16"
       >
         {isMenuHovered ? (
-          <>
-            {showTimer && isRunning ? (
+          <div className="mt-4">
+            <div className={`${showTimer && isRunning ? '' : 'invisible'}`}>
               <button
                 type="button"
-                className="m-1 rounded-full bg-gray-400 p-2 text-white hover:bg-gray-500"
+                className="rounded-full bg-gray-400 p-2 text-white hover:bg-gray-500"
                 onClick={resetTimer}
               >
                 <ResetIcon />
               </button>
-            ) : null}
-            <button className="text-sm text-stone-400" onClick={toggleTimer}>
+              <br />
+            </div>
+
+            <button
+              className="h-8 text-sm text-stone-400"
+              onClick={toggleTimer}
+            >
               {showTimer ? 'Hide Timer' : 'Show Timer'}
             </button>
-          </>
+          </div>
         ) : (
-          <>
-            <button>
-              <ThreeDotsIcon className="m-1" />
+          <div className="mt-4">
+            <div className="invisible">
+              <button
+                type="button"
+                className="rounded-full bg-gray-400 p-2 text-white hover:bg-gray-500"
+                onClick={resetTimer}
+              >
+                <ResetIcon />
+              </button>
+              <br />
+            </div>
+            <button className="h-8">
+              <ThreeDotsIcon />
             </button>
-          </>
+          </div>
         )}
       </div>
     </div>
