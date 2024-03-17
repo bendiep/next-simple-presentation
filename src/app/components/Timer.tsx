@@ -40,17 +40,19 @@ export const Timer = () => {
   const formattedSeconds = formatTime(seconds)
 
   return (
-    <div className="mt-16 text-center">
-      <button onClick={toggleTimer}>
+    <div className="text-center md:mt-16">
+      <button className="text-stone-400" onClick={toggleTimer}>
         {showTimer ? 'Hide Timer' : 'Show Timer'}
       </button>
       {showTimer && (
-        <div className="text-center">
+        <div className="mt-4 text-center">
+          <p className="text-stone-400">
+            {isRunning ? 'Running' : 'Not running'}
+          </p>
           <div className="text-6xl font-medium">
             <span>{formattedHours}</span>:<span>{formattedMinutes}</span>:
             <span>{formattedSeconds}</span>
           </div>
-          <p>{isRunning ? 'Running' : 'Not running'}</p>
           <div className="md:flex">
             <div className="w-50 relative mt-2 rounded-md shadow-sm md:mr-2">
               <input
@@ -85,8 +87,7 @@ export const Timer = () => {
               </div>
             </div>
           </div>
-          <br />
-          <div>
+          <div className="mt-4">
             <button
               type="button"
               className="hover:bg-blue-70 m-1 rounded-full bg-blue-500 p-2 text-white"
