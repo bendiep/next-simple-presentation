@@ -7,7 +7,7 @@ const StartIcon = (props: React.ComponentPropsWithoutRef<'svg'>) => {
   return (
     <svg
       className="h-5 w-5"
-      viewBox="0 0 24 24"
+      viewBox="-1 0 24 24"
       fill="none"
       stroke="#ffffff"
       {...props}
@@ -87,9 +87,21 @@ export const Timer = () => {
         <p className="font-sans text-stone-400">
           {isRunning ? 'starting in...' : 'idle'}
         </p>
-        <div className="text-6xl font-medium">
-          <span>{formattedHours}</span>:<span>{formattedMinutes}</span>:
-          <span>{formattedSeconds}</span>
+        <div className="font-sans text-6xl font-normal text-stone-600">
+          {/* <span>{formattedHours}</span>:<span>{formattedMinutes}</span>:
+          <span>{formattedSeconds}</span> */}
+          <span>
+            {formattedHours}
+            <span className="font-sans text-sm font-medium">h</span>{' '}
+          </span>
+          <span>
+            {formattedMinutes}
+            <span className="font-sans text-sm font-medium">m</span>{' '}
+          </span>
+          <span>
+            {formattedSeconds}
+            <span className="font-sans text-sm font-medium">s</span>
+          </span>
         </div>
         <div className="md:flex">
           <div className="relative mt-2 rounded-md shadow-sm md:mr-2 md:w-32">
@@ -131,7 +143,7 @@ export const Timer = () => {
             </div>
           </div>
         </div>
-        <div className="mt-4">
+        <div className="mt-2">
           <button
             type="button"
             className="m-1 rounded-full bg-blue-500 p-2 text-white hover:bg-blue-700"
