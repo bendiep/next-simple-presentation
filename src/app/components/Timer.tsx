@@ -172,7 +172,7 @@ export const Timer = () => {
         onMouseEnter={() => setIsMenuHovered(true)}
         onMouseLeave={() => setIsMenuHovered(false)}
       >
-        <div className="m-4">
+        <div className="m-4 w-24">
           <div className={`${isMenuHovered ? '' : 'invisible'}`}>
             <div className={`${showTimer && isRunning ? '' : 'invisible'}`}>
               <button
@@ -189,7 +189,7 @@ export const Timer = () => {
             </button>
           </div>
           <div className={`${!isMenuHovered ? '' : 'invisible'}`}>
-            <button className="text-sm text-stone-400">
+            <button className="p-2 text-sm text-stone-400">
               <ThreeDotsIcon />
             </button>
           </div>
