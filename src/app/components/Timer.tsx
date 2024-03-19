@@ -157,7 +157,7 @@ export const Timer = () => {
           </div>
         </div>
         <div className="mt-2">
-          {!isRunning ? (
+          <div className={`${!isRunning ? '' : 'invisible'}`}>
             <button
               type="button"
               className="m-1 rounded-full bg-gray-400 p-2 text-white hover:bg-gray-500"
@@ -165,7 +165,7 @@ export const Timer = () => {
             >
               <StartIcon />
             </button>
-          ) : null}
+          </div>
         </div>
       </div>
       <div
