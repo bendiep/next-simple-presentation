@@ -171,13 +171,14 @@ export const Timer = () => {
       <div
         onMouseEnter={() => setIsMenuHovered(true)}
         onMouseLeave={() => setIsMenuHovered(false)}
+        className="flex justify-center"
       >
-        <div className="m-4 w-24">
+        <div className="w-24">
           <div className={`${isMenuHovered ? '' : 'invisible'}`}>
             <div className={`${showTimer && isRunning ? '' : 'invisible'}`}>
               <button
                 type="button"
-                className="mt-4 rounded-full bg-gray-400 p-2 text-white hover:bg-gray-500"
+                className="rounded-full bg-gray-400 p-2 text-white hover:bg-gray-500"
                 onClick={resetTimer}
               >
                 <ResetIcon />
