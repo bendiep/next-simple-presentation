@@ -2,6 +2,8 @@
 
 A simple web app for quickly creating a decent-looking backdrop before a presentation. It's designed to be run locally and used when sharing your screen during a video call. You can easily configure the presenter's photos, name, and presentation topic. The app also features a countdown timer to let your audience know how much longer until the start time.
 
+![Screenshot of Simple Presentation App](screenshot.png)
+
 ## Getting Started
 
 ```bash
