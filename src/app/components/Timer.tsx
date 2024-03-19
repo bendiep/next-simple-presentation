@@ -95,7 +95,7 @@ export const Timer = () => {
   const formattedSeconds = formatTime(seconds)
 
   return (
-    <div className="text-center md:mt-8">
+    <div className="grid place-items-center text-center md:mt-8">
       <div className={`mt-4 text-center ${showTimer ? '' : 'invisible'}`}>
         <p className="font-sans text-stone-400">
           {isRunning ? 'starting in...' : 'idle'}
@@ -171,26 +171,33 @@ export const Timer = () => {
       <div
         onMouseEnter={() => setIsMenuHovered(true)}
         onMouseLeave={() => setIsMenuHovered(false)}
-        className="flex justify-center"
+        className="relative h-16 w-20"
       >
-        <div className="w-24">
-          <div className={`${isMenuHovered ? '' : 'invisible'}`}>
+        <div className="w-20">
+          <div
+            className={`absolute bottom-0 ${isMenuHovered ? '' : 'invisible'}`}
+          >
             <div className={`${showTimer && isRunning ? '' : 'invisible'}`}>
               <button
                 type="button"
-                className="rounded-full bg-gray-400 p-2 text-white hover:bg-gray-500"
+                className="mb-1 rounded-full bg-gray-400 p-1 text-white hover:bg-gray-500"
                 onClick={resetTimer}
               >
                 <ResetIcon />
               </button>
               <br />
             </div>
-            <button className="text-sm text-stone-400" onClick={toggleTimer}>
+            <button
+              className="grid w-20 place-items-center text-sm text-stone-400"
+              onClick={toggleTimer}
+            >
               {showTimer ? 'Hide Timer' : 'Show Timer'}
             </button>
           </div>
-          <div className={`${!isMenuHovered ? '' : 'invisible'}`}>
-            <button className="p-2 text-sm text-stone-400">
+          <div
+            className={`absolute bottom-0 grid w-20 place-items-center ${!isMenuHovered ? '' : 'invisible'}`}
+          >
+            <button className="text-sm text-stone-400">
               <ThreeDotsIcon />
             </button>
           </div>
