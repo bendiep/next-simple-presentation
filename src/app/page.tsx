@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-gray-100">
       <Header date={date.toUpperCase()} />
-      <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">
+      <h2 className="truncate text-3xl font-bold leading-7 tracking-tight text-gray-900 md:text-4xl">
         featuring
       </h2>
       <div className="flex flex-wrap justify-center">
