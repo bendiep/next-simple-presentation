@@ -36,10 +36,10 @@ export default function Home() {
   ]
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-gray-100">
+    <div className="flex min-h-screen flex-col items-center justify-center bg-white dark:bg-zinc-900">
       <Header date={date.toUpperCase()} />
       <Title />
-      <h2 className="truncate text-3xl font-bold leading-7 tracking-tight text-gray-900 md:text-4xl">
+      <h2 className="truncate text-3xl font-bold leading-7 tracking-tight text-gray-900 md:text-4xl dark:text-zinc-100">
         featuring
       </h2>
       <div className="flex flex-wrap justify-center">
