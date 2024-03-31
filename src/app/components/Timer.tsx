@@ -122,7 +122,7 @@ export const Timer = () => {
               type="number"
               name="timer-minutes"
               id="timer-minutes"
-              className="w-full rounded-md border-0 py-1.5 pl-7 pr-12 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
+              className="w-full rounded-md border-0 py-1.5 pl-7 pr-12 text-gray-900 outline-none ring-1 ring-inset ring-gray-300 [appearance:textfield] placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 dark:bg-zinc-500/50 dark:text-white dark:ring-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
               placeholder="0"
               min="0"
               value={inputMinutes}
@@ -131,7 +131,10 @@ export const Timer = () => {
               }}
             />
             <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
-              <span className="text-gray-500 sm:text-sm" id="timer-minutes">
+              <span
+                className="text-gray-500 sm:text-sm dark:text-gray-400"
+                id="timer-minutes"
+              >
                 min
               </span>
             </div>
@@ -141,7 +144,7 @@ export const Timer = () => {
               type="number"
               name="timer-seconds"
               id="timer-seconds"
-              className="w-full rounded-md border-0 py-1.5 pl-7 pr-12 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
+              className="w-full rounded-md border-0 py-1.5 pl-7 pr-12 text-gray-900 outline-none ring-1 ring-inset ring-gray-300 [appearance:textfield] placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 dark:bg-zinc-500/50 dark:text-white dark:ring-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
               placeholder="0"
               min="0"
               value={inputSeconds}
@@ -150,7 +153,10 @@ export const Timer = () => {
               }}
             />
             <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
-              <span className="text-gray-500 sm:text-sm" id="timer-seconds">
+              <span
+                className="text-gray-500 sm:text-sm dark:text-gray-400"
+                id="timer-seconds"
+              >
                 sec
               </span>
             </div>
