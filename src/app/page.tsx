@@ -9,7 +9,11 @@ import presenterThree from '@/images/example-photo-3.jpeg'
 import { Title } from './components/Title'
 
 export default function Home() {
-  const date = '16 Mar'
+  const date = new Date().toLocaleDateString('en-AU', {
+    day: 'numeric',
+    month: 'short',
+  })
+
   const presenters = [
     {
       id: 1,
