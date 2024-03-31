@@ -1,4 +1,4 @@
-import { Header } from './components/Title'
+import { Header } from './components/Header'
 import { PresenterCard } from './components/PresenterCard'
 import { Timer } from './components/Timer'
 import { Footer } from './components/Footer'
@@ -6,6 +6,7 @@ import { Footer } from './components/Footer'
 import presenterOne from '@/images/example-photo-1.jpeg'
 import presenterTwo from '@/images/example-photo-2.jpeg'
 import presenterThree from '@/images/example-photo-3.jpeg'
+import { Title } from './components/Title'
 
 export default function Home() {
   const date = '16 Mar'
@@ -33,6 +34,7 @@ export default function Home() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-gray-100">
       <Header date={date.toUpperCase()} />
+      <Title />
       <h2 className="truncate text-3xl font-bold leading-7 tracking-tight text-gray-900 md:text-4xl">
         featuring
       </h2>
