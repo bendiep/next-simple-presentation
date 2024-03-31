@@ -100,7 +100,7 @@ export const Timer = () => {
         <p className="font-sans text-stone-400">
           {isRunning ? 'starting in...' : 'idle'}
         </p>
-        <div className="w-80 font-sans text-6xl font-normal text-stone-600">
+        <div className="w-80 font-sans text-6xl font-normal text-stone-600 dark:text-stone-100">
           <span>
             {formattedHours}
             <span className="font-sans text-sm font-medium">h</span>{' '}
@@ -122,7 +122,7 @@ export const Timer = () => {
               type="number"
               name="timer-minutes"
               id="timer-minutes"
-              className="w-full rounded-md border-0 py-1.5 pl-7 pr-12 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
+              className="w-full rounded-md border-0 py-1.5 pl-7 pr-12 text-gray-900 outline-none ring-1 ring-inset ring-gray-300 [appearance:textfield] placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 dark:bg-zinc-500/50 dark:text-white dark:ring-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
               placeholder="0"
               min="0"
               value={inputMinutes}
@@ -131,7 +131,10 @@ export const Timer = () => {
               }}
             />
             <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
-              <span className="text-gray-500 sm:text-sm" id="timer-minutes">
+              <span
+                className="text-gray-500 sm:text-sm dark:text-gray-400"
+                id="timer-minutes"
+              >
                 min
               </span>
             </div>
@@ -141,7 +144,7 @@ export const Timer = () => {
               type="number"
               name="timer-seconds"
               id="timer-seconds"
-              className="w-full rounded-md border-0 py-1.5 pl-7 pr-12 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
+              className="w-full rounded-md border-0 py-1.5 pl-7 pr-12 text-gray-900 outline-none ring-1 ring-inset ring-gray-300 [appearance:textfield] placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 dark:bg-zinc-500/50 dark:text-white dark:ring-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
               placeholder="0"
               min="0"
               value={inputSeconds}
@@ -150,7 +153,10 @@ export const Timer = () => {
               }}
             />
             <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
-              <span className="text-gray-500 sm:text-sm" id="timer-seconds">
+              <span
+                className="text-gray-500 sm:text-sm dark:text-gray-400"
+                id="timer-seconds"
+              >
                 sec
               </span>
             </div>
@@ -160,7 +166,7 @@ export const Timer = () => {
           <div className={`${!isRunning ? '' : 'invisible'}`}>
             <button
               type="button"
-              className="m-1 rounded-full bg-gray-400 p-2 text-white hover:bg-gray-500"
+              className="m-1 rounded-full bg-sky-400 p-2 text-white hover:bg-sky-300 dark:bg-purple-500 dark:hover:bg-purple-400"
               onClick={startTimer}
             >
               <StartIcon />
@@ -180,7 +186,7 @@ export const Timer = () => {
             <div className={`${showTimer && isRunning ? '' : 'invisible'}`}>
               <button
                 type="button"
-                className="mb-1 rounded-full bg-gray-400 p-1 text-white hover:bg-gray-500"
+                className="mb-1 rounded-full bg-sky-400 p-1 text-white hover:bg-sky-300 dark:bg-purple-500 dark:hover:bg-purple-400"
                 onClick={resetTimer}
               >
                 <ResetIcon />
@@ -197,7 +203,7 @@ export const Timer = () => {
           <div
             className={`absolute bottom-0 grid w-20 place-items-center ${!isMenuHovered ? '' : 'invisible'}`}
           >
-            <button className="text-sm text-stone-400">
+            <button>
               <ThreeDotsIcon />
             </button>
           </div>
