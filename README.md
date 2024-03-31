@@ -1,4 +1,4 @@
-# react-simple-presentation
+# next-simple-presentation
 
 A simple web app for quickly creating a decent-looking backdrop before a presentation.
 
