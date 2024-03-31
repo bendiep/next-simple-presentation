@@ -100,7 +100,7 @@ export const Timer = () => {
         <p className="font-sans text-stone-400">
           {isRunning ? 'starting in...' : 'idle'}
         </p>
-        <div className="w-80 font-sans text-6xl font-normal text-stone-600">
+        <div className="w-80 font-sans text-6xl font-normal text-stone-600 dark:text-stone-100">
           <span>
             {formattedHours}
             <span className="font-sans text-sm font-medium">h</span>{' '}
@@ -160,7 +160,7 @@ export const Timer = () => {
           <div className={`${!isRunning ? '' : 'invisible'}`}>
             <button
               type="button"
-              className="m-1 rounded-full bg-gray-400 p-2 text-white hover:bg-gray-500"
+              className="m-1 rounded-full bg-sky-400 p-2 text-white hover:bg-sky-300 dark:bg-purple-500 dark:hover:bg-purple-400"
               onClick={startTimer}
             >
               <StartIcon />
@@ -180,7 +180,7 @@ export const Timer = () => {
             <div className={`${showTimer && isRunning ? '' : 'invisible'}`}>
               <button
                 type="button"
-                className="mb-1 rounded-full bg-gray-400 p-1 text-white hover:bg-gray-500"
+                className="mb-1 rounded-full bg-sky-400 p-1 text-white hover:bg-sky-300 dark:bg-purple-500 dark:hover:bg-purple-400"
                 onClick={resetTimer}
               >
                 <ResetIcon />
@@ -197,7 +197,7 @@ export const Timer = () => {
           <div
             className={`absolute bottom-0 grid w-20 place-items-center ${!isMenuHovered ? '' : 'invisible'}`}
           >
-            <button className="text-sm text-stone-400">
+            <button>
               <ThreeDotsIcon />
             </button>
           </div>
