@@ -16,7 +16,7 @@ export const PresenterCard = ({
         <div className="text-black-900 mb-2 max-w-64 border-b-4 border-cyan-500 text-center text-xl font-bold dark:border-fuchsia-600">
           {name}
         </div>
-        <p className="max-w-64 text-center text-base text-gray-700">{topic}</p>
+        <p className="max-w-64 text-center text-base  text-gray-700">{topic}</p>
       </div>
     </div>
   )
