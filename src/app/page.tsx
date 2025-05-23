@@ -40,7 +40,7 @@ export default function Home() {
     <div className="flex min-h-screen flex-col items-center justify-center bg-white dark:bg-zinc-900">
       <Header date={date.toUpperCase()} />
       <Title />
-      <h2 className="truncate text-3xl font-bold leading-7 tracking-tight text-gray-700 dark:text-zinc-100 md:text-4xl">
+      <h2 className="truncate text-3xl leading-7 font-bold tracking-tight text-gray-700 md:text-4xl dark:text-zinc-100">
         featuring
       </h2>
       <div className="flex flex-wrap justify-center">

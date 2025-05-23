@@ -122,7 +122,7 @@ export const Timer = () => {
               type="number"
               name="timer-minutes"
               id="timer-minutes"
-              className="w-full rounded-md border-0 py-1.5 pl-7 pr-12 text-gray-900 outline-none ring-1 ring-inset ring-gray-300 [appearance:textfield] placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 dark:bg-zinc-500/50 dark:text-white dark:ring-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+              className="w-full [appearance:textfield] rounded-md border-0 py-1.5 pr-12 pl-7 text-gray-900 ring-1 ring-gray-300 outline-none ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 dark:bg-zinc-500/50 dark:text-white dark:ring-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
               placeholder="0"
               min="0"
               value={inputMinutes}
@@ -144,7 +144,7 @@ export const Timer = () => {
               type="number"
               name="timer-seconds"
               id="timer-seconds"
-              className="w-full rounded-md border-0 py-1.5 pl-7 pr-12 text-gray-900 outline-none ring-1 ring-inset ring-gray-300 [appearance:textfield] placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 dark:bg-zinc-500/50 dark:text-white dark:ring-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+              className="w-full [appearance:textfield] rounded-md border-0 py-1.5 pr-12 pl-7 text-gray-900 ring-1 ring-gray-300 outline-none ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 dark:bg-zinc-500/50 dark:text-white dark:ring-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
               placeholder="0"
               min="0"
               value={inputSeconds}

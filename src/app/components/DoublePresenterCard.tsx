@@ -21,10 +21,10 @@ export const DoublePresenterCard = ({
       </div>
       <div className="px-2 py-4">
         <div className="mb-2 flex justify-between border-b-4 border-cyan-500 dark:border-fuchsia-600">
-          <div className="text-black-900 w-1/2 text-nowrap p-2 text-center text-xl font-bold">
+          <div className="text-black-900 w-1/2 p-2 text-center text-xl font-bold text-nowrap">
             {name1}
           </div>
-          <div className="text-black-900 w-1/2 text-nowrap p-2 text-center text-xl font-bold">
+          <div className="text-black-900 w-1/2 p-2 text-center text-xl font-bold text-nowrap">
             {name2}
           </div>
         </div>
