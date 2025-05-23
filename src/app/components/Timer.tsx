@@ -166,7 +166,7 @@ export const Timer = () => {
           <div className={`${!isRunning ? '' : 'invisible'}`}>
             <button
               type="button"
-              className="m-1 rounded-full bg-sky-400 p-2 text-white hover:bg-sky-300 dark:bg-purple-500 dark:hover:bg-purple-400"
+              className="m-1 cursor-pointer rounded-full bg-sky-400 p-2 text-white hover:bg-sky-300 dark:bg-purple-500 dark:hover:bg-purple-400"
               onClick={startTimer}
             >
               <StartIcon />
@@ -186,7 +186,7 @@ export const Timer = () => {
             <div className={`${showTimer && isRunning ? '' : 'invisible'}`}>
               <button
                 type="button"
-                className="mb-1 rounded-full bg-sky-400 p-1 text-white hover:bg-sky-300 dark:bg-purple-500 dark:hover:bg-purple-400"
+                className="mb-1 cursor-pointer rounded-full bg-sky-400 p-1 text-white hover:bg-sky-300 dark:bg-purple-500 dark:hover:bg-purple-400"
                 onClick={resetTimer}
               >
                 <ResetIcon />
@@ -194,7 +194,7 @@ export const Timer = () => {
               <br />
             </div>
             <button
-              className="grid w-20 place-items-center text-sm text-stone-400"
+              className="grid w-20 cursor-pointer place-items-center text-sm text-stone-400"
               onClick={toggleTimer}
             >
               {showTimer ? 'Hide Timer' : 'Show Timer'}
@@ -203,7 +203,7 @@ export const Timer = () => {
           <div
             className={`absolute bottom-0 grid w-20 place-items-center ${!isMenuHovered ? '' : 'invisible'}`}
           >
-            <button>
+            <button className="cursor-pointer">
               <ThreeDotsIcon />
             </button>
           </div>
